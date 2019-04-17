@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownButton, DropdownItem, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { getUsers } from '../Actions/users'
 import { setUser } from '../Actions/setUser'
 import { connect } from 'react-redux'

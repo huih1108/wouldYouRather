@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import {ProgressBar, Button} from 'react-bootstrap'
 import {handleSaveQuestionAnswer} from '../Actions/questions'
-import { Redirect } from 'react-router-dom'
 import ErrorPage from './ErrorPage'
 class QuestionDetails extends Component {
     

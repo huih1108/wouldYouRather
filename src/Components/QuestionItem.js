@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
-import { connect } from 'react-redux'
 import {formatDate} from '../utils/helpers'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 class QuestionItem extends Component{
 

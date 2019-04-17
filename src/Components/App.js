@@ -15,23 +15,6 @@ import Navbar from './Navbar';
 import LoadingBar from 'react-redux-loading'
 
 
-{/* <Router>
-<Fragment>
-  <LoadingBar />
-  <div className='container'>
-    <Nav />
-    {loading === true
-      ? null
-      : <div>
-          <Route path='/' exact component={Login} />
-          <Route path='/tweet/:id' component={TweetPage} />
-          <Route path='/new' component={NewTweet} />
-        </div>}
-  </div>
-</Fragment>
-</Router> */}
-
-
 class App extends Component {
   componentDidMount() {
     this.props.dispatch(handleInitialData())

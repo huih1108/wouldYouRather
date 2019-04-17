@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import { Tabs, Tab, Nav } from 'react-bootstrap';
-
 
 
 class Navbar extends Component {
