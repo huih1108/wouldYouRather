@@ -1,14 +1,6 @@
-import React, {Component} from 'react'
+import React from "react";
 
-class ErrorPage extends Component{
-
-    
-    render(){
-        return(<h3>Sorry, the information you are requesting is not found.</h3>)
-    }
-
-    
-
-}
-
-export default ErrorPage
+const ErrorPage = () => {
+  return <h3>Sorry, the information you are requesting is not found.</h3>;
+};
+export default ErrorPage;

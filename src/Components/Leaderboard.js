@@ -1,38 +1,30 @@
-import React, {Component} from 'react'
-import { connect } from 'react-redux'
-import User from './User'
-import _ from 'lodash'
+import React from "react";
+import { connect } from "react-redux";
+import User from "./User";
+import _ from "lodash";
+import PropTypes from "prop-types";
 
-class Leaderboard extends Component{
+const Leaderboard = ({ users }) => {
+  let usersRanking;
+  let sortedUser;
 
-    
-    render(){
-        const {users} = this.props
-        let rank = 0
-        console.log(users)
-        console.log(typeof(users))
-        let usersRanking
-        let sortedUser
-        // sortedUser = typeof(users)
-    
-        sortedUser = _.sortBy(users,(user) => 
-        -(_.size(user.answers)+_.size(user.questions)))
-         console.log(sortedUser)
-         usersRanking = _.map(sortedUser, (user, index) => 
-         <User key={user.id} user={user} rank={index+1} />)
-        
-        return(<div>{usersRanking}</div>)
-    }
+  sortedUser = _.sortBy(
+    users,
+    user => -(_.size(user.answers) + _.size(user.questions))
+  );
+  usersRanking = _.map(sortedUser, (user, index) => (
+    <User key={user.id} user={user} rank={index + 1} />
+  ));
 
-    
+  return <div>{usersRanking}</div>;
+};
 
+Leaderboard.propTypes = {
+  users: PropTypes.object
+};
+function mapStatetoProps(store) {
+  return {
+    users: store.usersReducer
+  };
 }
-
-function mapStatetoProps(store){
-    
-    return{
-        users: store.usersReducer
-    }
-        
-}
-export default connect(mapStatetoProps)(Leaderboard)
+export default connect(mapStatetoProps)(Leaderboard);
