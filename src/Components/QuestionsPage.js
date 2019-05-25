@@ -5,45 +5,48 @@ import { Tab, Tabs } from "react-bootstrap";
 import QuestionItem from "./QuestionItem";
 import PropTypes from "prop-types";
 
-const QuestionsPage = ({ questions, user, users }) => {
-  let answered;
-  let unanswered;
-  answered = _.filter(questions, question => {
-    return Object.keys(user.answers).includes(question.id);
-  }).sort((a, b) => b.timestamp - a.timestamp);
-  unanswered = _.filter(questions, question => {
-    return !Object.keys(user.answers).includes(question.id);
-  }).sort((a, b) => b.timestamp - a.timestamp);
+class QuestionsPage extends React.PureComponent {
+  render() {
+    const { questions, user, users } = this.props;
+    let answered;
+    let unanswered;
+    answered = _.filter(questions, question => {
+      return Object.keys(user.answers).includes(question.id);
+    }).sort((a, b) => b.timestamp - a.timestamp);
+    unanswered = _.filter(questions, question => {
+      return !Object.keys(user.answers).includes(question.id);
+    }).sort((a, b) => b.timestamp - a.timestamp);
 
-  return (
-    <div>
-      <Tabs defaultActiveKey="unanswered">
-        <Tab eventKey="unanswered" title="Unanswered Questions">
-          {unanswered &&
-            unanswered.map(question => (
-              <div key={question.id}>
-                <QuestionItem
-                  question={question}
-                  user={users[question.author]}
-                />
-              </div>
-            ))}
-        </Tab>
-        <Tab eventKey="answered" title="Answered Questions">
-          {answered &&
-            answered.map(question => (
-              <div key={question.id}>
-                <QuestionItem
-                  question={question}
-                  user={users[question.author]}
-                />
-              </div>
-            ))}
-        </Tab>
-      </Tabs>
-    </div>
-  );
-};
+    return (
+      <div>
+        <Tabs defaultActiveKey="unanswered">
+          <Tab eventKey="unanswered" title="Unanswered Questions">
+            {unanswered &&
+              unanswered.map(question => (
+                <div key={question.id}>
+                  <QuestionItem
+                    question={question}
+                    user={users[question.author]}
+                  />
+                </div>
+              ))}
+          </Tab>
+          <Tab eventKey="answered" title="Answered Questions">
+            {answered &&
+              answered.map(question => (
+                <div key={question.id}>
+                  <QuestionItem
+                    question={question}
+                    user={users[question.author]}
+                  />
+                </div>
+              ))}
+          </Tab>
+        </Tabs>
+      </div>
+    );
+  }
+}
 
 QuestionsPage.propTypes = {
   users: PropTypes.object,

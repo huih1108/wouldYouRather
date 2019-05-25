@@ -6,6 +6,7 @@
     "babel-loader": "^8.0.5",
     "bootstrap": "^4.3.1",
     "jquery": "^3.3.1",
+    "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.6",
     "react-dom": "^16.8.6",
@@ -21,7 +22,9 @@
     "webpack": "4.28.3"
   },
   "scripts": {
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "aws s3 sync build/ s3://wouldyouratherapphedy"
   },
   "eslintConfig": {
     "extends": "react-app"

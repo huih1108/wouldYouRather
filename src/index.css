@@ -21,7 +21,7 @@ code {
 }
 
 .dropbtn {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 16px;
   font-size: 16px;
@@ -39,7 +39,7 @@ code {
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -50,7 +50,9 @@ code {
   display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -65,13 +67,13 @@ code {
   margin: 10px;
 }
 
-.question-item{
+.question-item {
   border-color: cadetblue;
   border-bottom-style: double;
   padding: 10px;
 }
 
-a{
+a {
   color: #000000;
 }
 
@@ -95,7 +97,7 @@ a:-webkit-any-link {
 }
 
 .ul {
-  float: left
+  float: left;
 }
 
 .nav li {
@@ -106,50 +108,47 @@ a:-webkit-any-link {
 .active {
   font-weight: bold;
 }
-.newquestion-submit{
+.newquestion-submit {
   display: flex;
   margin: 10px;
   text-align: center;
 }
 
-.newquestion{
+.newquestion {
   text-align: center;
   font-size: 20px;
 }
 
-.newquestion-input{
+.newquestion-input {
   display: flex;
   margin: 10px;
-  width:100%;
+  width: 100%;
 }
 
 input {
-  margin: .4rem;
+  margin: 0.4rem;
 }
-.question-voted{
+.question-voted {
   border-color: cornflowerblue;
   padding: 10px;
-  border:2px solid
+  border: 2px solid;
 }
-.question-unvoted{
+.question-unvoted {
   padding: 10px;
-  
 }
-.vote-indicator{
+.vote-indicator {
   font-size: 12px;
   font-weight: bold;
 }
 
-legend{
-  width: fit-content
+legend {
+  width: fit-content;
 }
-
 
 .navbar li {
   padding: 20px;
   list-style-type: none;
-  font-size:24px;
-
+  font-size: 24px;
 }
 
 .navbar ul {
@@ -159,28 +158,26 @@ legend{
   text-decoration: none;
 }
 
-select{
-  width:100%;
+select {
+  width: 100%;
   margin: 10px;
 }
 
-.login{
+.login {
   font-size: 20px;
   text-align: center;
-
 }
-.loginstatus{
+.loginstatus {
   float: right;
   margin: 10px;
   position: fixed;
-  right:0;
-  top:0;
-
+  right: 0;
+  top: 0;
 }
-.loginstatus-logoutbutton{
-  margin: 10px
+.loginstatus-logoutbutton {
+  margin: 10px;
 }
-.leaderboard-user{
+.leaderboard-user {
   border-color: cadetblue;
   border-bottom-style: double;
   padding: 10px;
